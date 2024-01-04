@@ -1,5 +1,6 @@
 import {combineReducers} from "redux";
 import {DO_DECREASE, DO_INCREASE} from "./actions";
+
 /**reducer là function làm nhiệm vụ khởi tạo
  * và quản lý các logic/tính toán.
  * Function trong reducer sẽ nhận các state
@@ -11,27 +12,23 @@ import {DO_DECREASE, DO_INCREASE} from "./actions";
  * - Không xử lý bất đồng bộ, các side effect. Những công việc này được xử lý thông qua Middleware
  * */
 
-/*Khởi tạo giá trị ban đầu cho state*/
-
 const initState = {
     balance: 0,
 };
 
-/*Khởi tạo các reducer làm nhiệm vụ tương tác với state
-*/
 const reducer = (state = initState, action) => {
 
     switch (action.type) {
         case DO_INCREASE:
             return {
                 ...state,
-                balance: state.balance + action.payload
-            }
+                balance: state.balance + +action.payload,
+            };
         case DO_DECREASE:
             return {
                 ...state,
-                balance: state.balance - action.payload
-            }
+                balance: state.balance - +action.payload,
+            };
         default:
             return state;
     }

@@ -1,9 +1,14 @@
 import './App.css';
-import MainPage from "./components/MainPage";
+import BodyPage from "./components/BodyPage";
+import Header from "./components/Header";
 
 function App() {
+
     return (
-        <MainPage/>
+        <>
+            <Header/>
+            <BodyPage/>
+        </>
     );
 }
 

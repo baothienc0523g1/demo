@@ -5,17 +5,17 @@
  * với dữ liệu (payload) gì*/
 
 
-const doIncrease = () => {
+const doIncrease = (val) => {
     return {
         type: DO_INCREASE,
-        payload: 1,
+        payload: val,
     };
 }
 
-const doDecrease = () => {
+const doDecrease = (val) => {
     return {
         type: DO_DECREASE,
-        payload: 1,
+        payload: val,
     };
 }
 
