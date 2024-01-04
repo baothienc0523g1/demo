@@ -14,7 +14,7 @@ import {DO_DECREASE, DO_INCREASE} from "./actions";
 /*Khởi tạo giá trị ban đầu cho state*/
 
 const initState = {
-    balance: 0
+    balance: 0,
 };
 
 /*Khởi tạo các reducer làm nhiệm vụ tương tác với state

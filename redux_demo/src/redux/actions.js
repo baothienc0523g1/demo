@@ -6,19 +6,17 @@
 
 
 const doIncrease = () => {
-    let action = {
+    return {
         type: DO_INCREASE,
         payload: 1,
     };
-    return action;
 }
 
 const doDecrease = () => {
-    let action = {
+    return {
         type: DO_DECREASE,
         payload: 1,
     };
-    return action;
 }
 
 export {doIncrease, doDecrease}
